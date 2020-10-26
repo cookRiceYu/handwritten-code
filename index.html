@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="./jsonp.js"></script>
+  <script>
+    jsonp({
+      url: "https://www.baidu.com/sugrec",
+      params: {
+        pre: 1,
+        p: 3,
+        ie: 'utf-8',
+        json: 1,
+        prod: 'pc',
+        from: 'pc_web',
+        sugsid: [1454, 32854, 31253, 32706, 32231, 7516, 31708, 26350, 32919],
+        wd: "你",
+        req: 2,
+        csor: 1,
+        pwd: "ni",
+        _: 1603705278155,
+      },
+      callbackName: "__callback",
+    }).then((res) => {
+      console.log(res);
+    });
+  </script>
+</html>
